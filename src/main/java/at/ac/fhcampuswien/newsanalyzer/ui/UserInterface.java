@@ -24,7 +24,9 @@ public class UserInterface {
     }
 
     public void getDataForCustomInput() {
-        // TODO implement me
+        System.out.print("Bitte geben Sie den gewünschten Query ein: ");
+        String query = readLine();
+        ctrl.process(query,null);
     }
 
 

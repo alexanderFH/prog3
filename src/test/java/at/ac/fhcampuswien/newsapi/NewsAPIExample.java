@@ -13,7 +13,7 @@ public class NewsAPIExample {
     public static final String APIKEY = "a8ad5f613fba4100904597e3ca1ae331";    //TODO add your api key
 
     public static void main(String[] args) {
-        try {
+
         NewsApi newsApi = new NewsApiBuilder()
                 .setApiKey(APIKEY)
                 .setQ("corona")
@@ -44,9 +44,7 @@ public class NewsAPIExample {
                 articles.stream().forEach(article -> System.out.println(article.toString()));
             }
 
-        } catch (Exception e) {
-            System.out.println("ERROR");
-        }
+
 
     }
 }
