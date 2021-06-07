@@ -121,7 +121,7 @@ public class NewsApi {
         try {
             obj = new URL(url);
         } catch (MalformedURLException e) {
-            // TODO improve ErrorHandling
+            System.err.println("MalformedURL");
             e.printStackTrace();
         }
         HttpURLConnection con;
@@ -136,7 +136,7 @@ public class NewsApi {
             in.close();
         } catch (IOException e) {
             // TODO improve ErrorHandling
-            System.out.println("Error "+e.getMessage());
+            System.err.println("Error "+e.getMessage());
         }
         return response.toString();
     }
